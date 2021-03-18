@@ -1,13 +1,13 @@
 local Connections = {}
 
-function ClearAllConnections()
+function ClearAllConnections() --Clears all the connections in the table
 	for i, v in pairs(Connections) do
 		v:Disconnect()
 	Connections[i] = nil
 	end 
 end
 
-function ClearSpecificConnection(Key)
+function ClearSpecificConnection(Key) --Clears a specific connection in the table
 	local Connection = Connections[Key]
 	if Connection then
 		Connection:Disconnect()
