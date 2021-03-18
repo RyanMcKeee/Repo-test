@@ -4,7 +4,7 @@ function ClearAllConnections()
 	for i, v in pairs(Connections) do
 		v:Disconnect()
 		Connections[i] = nil
-	end
+	end 
 end
 
 function ClearSpecificConnection(Key)
