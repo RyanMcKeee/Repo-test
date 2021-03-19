@@ -1,5 +1,5 @@
 local Connections = {}
-
+ 
 function ClearAllConnections() --Clears all the connections in the table
 	for i, v in pairs(Connections) do
 		v:Disconnect()
