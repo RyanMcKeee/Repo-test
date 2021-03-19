@@ -29,6 +29,7 @@ function m.SerializeColor(part)
 	ColorTable.R = part.Color.R
 	ColorTable.B = part.Color.B
 	ColorTable.G = part.COlor.G
+	return ColorTable
 end
 
 return m
