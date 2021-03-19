@@ -2,6 +2,9 @@ local LoadStageEvent = game.ReplicatedStorage:WaitForChild("Events"):WaitForChil
 
 local StageModule = require(game.ServerScriptService:WaitForChild("ServerModules"):WaitForChild("StageModule"))
 
-loadStageEvent.OnClientEvent:connect(function()  
-    StageModule.CreateStage()
+local DefaultStages = game:GetService("ReplicatedStorage"):WaitForChild("Stages"):WaitForChild("Default")
+
+loadStageEvent.OnClientEvent:connect(function(player, StageName)
+	local StageData = DefaultStages[StageName]
+    StageModule.CreateStage(StageData)
 end)
