@@ -6,5 +6,5 @@ local DefaultStages = game:GetService("ReplicatedStorage"):WaitForChild("Stages"
 
 loadStageEvent.OnClientEvent:connect(function(player, StageName)
 	local StageData = DefaultStages[StageName]
-    StageModule.CreateStage(StageData)
+	StageModule.CreateStage(StageData)
 end)
